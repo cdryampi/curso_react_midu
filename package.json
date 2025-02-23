@@ -1,0 +1,21 @@
+{
+  "name": "curso_react_midu",
+  "version": "1.0.0",
+  "description": "Curso de ReactJS de MiduDev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdryampi/curso_react_midu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cdryampi/curso_react_midu/issues"
+  },
+  "homepage": "https://github.com/cdryampi/curso_react_midu#readme"
+}
