@@ -7,3 +7,10 @@ body {
   place-content: center;
   min-height: 100vh;
 }
+
+.tw-followCards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: column;
+}
