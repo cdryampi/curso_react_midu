@@ -1,35 +1,31 @@
 import "./App.css";
 import { TwitterFollowCard } from "./TwitterFollowCard";
+const users = [
+  { userName: "miduDev", name: "Miguel Ángel Durán" },
+  { userName: "pheralb", name: "Pablo Hernández" },
+  { userName: "dawntraoz", name: "David", isFollowing: true },
+  { userName: "jgferreiro", name: "Javier" },
+  { userName: "sergiodxa", name: "Sergio" },
+  { userName: "d4ve_dev", name: "David" },
+  { userName: "jgferreiro", name: "Javier" },
+  { userName: "sergiodxa", name: "Sergio" },
+  { userName: "d4ve_dev", name: "David", isFollowing: true },
+];
 
 export function App() {
-  const formattedUserName = <span>@midudev</span>;
-
   return (
     <section className="tw-followCards">
-      <TwitterFollowCard
-        formattedUserName={formattedUserName}
-        userName="midudev"
-        name="Miguel Ángel Durán"
-        isFollowing
-      />
-      <TwitterFollowCard
-        formattedUserName={formattedUserName}
-        userName="pheralb"
-        name="pablo hernandez"
-        isFollowing
-      />
-      <TwitterFollowCard
-        formattedUserName={formattedUserName}
-        userName="elonmusk"
-        name="Elon Musk"
-        isFollowing
-      />
-      <TwitterFollowCard
-        formattedUserName={formattedUserName}
-        userName="vxnder"
-        name="vander berg"
-        isFollowing={false}
-      />
+      {users.map((user, index) => {
+        return (
+          <TwitterFollowCard
+            key={user.userName + index}
+            userName={user.userName}
+            initialIsFollowing={user.isFollowing}
+          >
+            {user.name}
+          </TwitterFollowCard>
+        );
+      })}
     </section>
   );
 }
